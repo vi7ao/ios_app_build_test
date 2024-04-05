@@ -22,6 +22,7 @@ jobs:
 
     - name: Build iOS App
       run: |
+        fastlane match development
         xcodebuild -workspace "Sis. Ponto.xcworkspace" -scheme "Sis. Ponto" -sdk iphoneos -configuration Release -allowProvisioningUpdates build
         xcodebuild -exportArchive -archivePath build/SisPonto.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath build
 
