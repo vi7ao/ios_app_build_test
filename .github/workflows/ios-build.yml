@@ -23,3 +23,9 @@ jobs:
       run: |
         cd Sis. Ponto
         xcodebuild -workspace Sis. Ponto.xcworkspace -scheme Sis. Ponto -sdk iphoneos -configuration Release build
+
+    - name: Upload IPA
+      uses: actions/upload-artifact@v2
+      with:
+        name: SistemaPonto.ipa
+        path: src/SistemaPonto.ipa
