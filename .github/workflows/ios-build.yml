@@ -22,7 +22,7 @@ jobs:
 
     - name: Build iOS App
       run: |
-        xcodebuild -workspace "Sis. Ponto.xcworkspace" -scheme "Sis. Ponto" -sdk iphoneos -configuration Release build
+        xcodebuild -workspace "Sis. Ponto.xcworkspace" -scheme "Sis. Ponto" -sdk iphoneos -configuration Release -allowProvisioningUpdates build
         xcodebuild -exportArchive -archivePath build/SisPonto.xcarchive -exportOptionsPlist ExportOptions.plist -exportPath build
 
     - name: Upload IPA
