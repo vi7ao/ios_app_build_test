@@ -1,0 +1,25 @@
+name: iOS Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Xcode
+      uses: maxim-lobanov/setup-xcode@v1.2.1
+      with:
+        xcode-version: 'latest'
+
+    - name: Install Dependencies
+      run: |
+        cd Sis. Ponto
+        pod install
+
+    - name: Build iOS App
+      run: |
+        cd Sis. Ponto
+        xcodebuild -workspace Sis. Ponto.xcworkspace -scheme Sis. Ponto -sdk iphoneos -configuration Release build
