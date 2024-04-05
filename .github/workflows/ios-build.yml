@@ -16,13 +16,13 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        cd Sis. Ponto
+        cd "Sis. Ponto"
         pod install
 
     - name: Build iOS App
       run: |
-        cd Sis. Ponto
-        xcodebuild -workspace Sis. Ponto.xcworkspace -scheme Sis. Ponto -sdk iphoneos -configuration Release build
+        cd "Sis. Ponto"
+        xcodebuild -workspace "Sis. Ponto.xcworkspace" -scheme "Sis. Ponto" -sdk iphoneos -configuration Release build
 
     - name: Upload IPA
       uses: actions/upload-artifact@v2
